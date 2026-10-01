@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Обязательный тег для корректной работы верстки на телефонах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bever Defender — Git Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            color: #38bdf8;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #f43f5e;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* ===== ОФОРМЛЕНИЕ ДЛЯ ПК / НОУТБУКОВ ===== */
+        @media (min-width: 769px) {
+            .badge {
+                background-color: #0284c7;
+                color: #ffffff;
+            }
+            .badge::after {
+                content: " 💻 Версия для ПК / Ноутбука";
+            }
+        }
+
+        /*
+        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+           КОД ДЛЯ МОБИЛЬНОГО ПРИЛОЖЕНИЯ / ТЕЛЕФОНОВ НАЧИНАЕТСЯ ЗДЕСЬ
+           Всё, что находится внутри @media (max-width: 768px),
+           работает только на узких экранах.
+        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            /* На смартфонах карточки встают друг под друга в один столбик */
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .badge {
+                background-color: #10b981;
+                color: #ffffff;
+            }
+            .badge::after {
+                content: " 📱 Мобильная версия";
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🦫 Bever Defender</h1>
+    <p class="subtitle">Тестовая страница для проверки Git, GitHub Desktop и IntelliJ IDEA</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>1. Commit</h3>
+            <p>Фиксирует ваши изменения локально на компьютере.</p>
+        </div>
+        <div class="card">
+            <h3>2. Push</h3>
+            <p>Отправляет сохраненные коммиты на сайт GitHub.</p>
+        </div>
+        <div class="card">
+            <h3>3. Pull</h3>
+            <p>Скачивает свежие изменения из репозитория.</p>
+        </div>
+    </div>
+
+    <div class="badge">Режим отображения:</div>
+</div>
+
+</body>
+</html>
